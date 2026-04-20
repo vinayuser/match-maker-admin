@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#5d4200",
+                        "on-surface-variant": "#d4c4ac",
+                        "tertiary-fixed-dim": "#66d3ff",
+                        "error-container": "#93000a",
+                        "on-secondary-container": "#b8b8b8",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "surface-tint": "#fdbb24",
+                        "background": "#131313",
+                        "on-primary-container": "#664800",
+                        "primary-container": "#f5b41a",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "outline-variant": "#504533",
+                        "tertiary": "#a9e3ff",
+                        "outline": "#9d8f79",
+                        "on-background": "#e5e2e1",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed": "#001f2a",
+                        "on-tertiary": "#003546",
+                        "inverse-primary": "#7c5800",
+                        "on-error": "#690005",
+                        "on-tertiary-container": "#00546d",
+                        "on-tertiary-fixed-variant": "#004d64",
+                        "primary-fixed": "#ffdea6",
+                        "surface-container-high": "#2a2a2a",
+                        "on-surface": "#e5e2e1",
+                        "on-secondary": "#2f3131",
+                        "inverse-on-surface": "#313030",
+                        "tertiary-fixed": "#bde9ff",
+                        "surface-dim": "#131313",
+                        "secondary-fixed": "#e3e2e2",
+                        "on-error-container": "#ffdad6",
+                        "surface": "#131313",
+                        "surface-container": "#201f1f",
+                        "primary": "#ffd58a",
+                        "secondary": "#c7c6c6",
+                        "surface-container-highest": "#353534",
+                        "primary-fixed-dim": "#fdbb24",
+                        "secondary-container": "#484949",
+                        "surface-container-lowest": "#0e0e0e",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-bright": "#3a3939",
+                        "surface-variant": "#353534",
+                        "on-primary": "#412d00",
+                        "on-secondary-fixed-variant": "#464747",
+                        "on-primary-fixed": "#271900",
+                        "surface-container-low": "#1c1b1b",
+                        "tertiary-container": "#41cdff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body {
+            background-color: #0A0A0A;
+            color: #E5E2E1;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#0E0E0E] bg-surface-container-lowest min-h-screen flex overflow-hidden">
+<!-- SideNavBar Shell -->
+
+<!-- Main Canvas -->
+<main class="flex-1  min-h-screen flex flex-col">
+<!-- TopNavBar Shell -->
+
+<!-- Content Area -->
+<div class=" p-8 overflow-y-auto">
+<!-- Page Header -->
+<div class="flex justify-between items-end mb-10">
+<div class="space-y-1">
+<span class="text-[10px] uppercase tracking-[0.3em] font-bold text-[#F5B41A]">Audit Dashboard</span>
+<h2 class="text-4xl font-extrabold tracking-tight text-white">Completed Cycles &amp; Revenue</h2>
+<p class="text-[#A3A3A3] text-sm max-w-lg">Monitor historical match success rates and financial reconciliations for the current fiscal quarter.</p>
+</div>
+<div class="flex gap-4">
+<button class="flex items-center gap-2 px-5 py-2.5 bg-[#0E0E0E] border border-outline/30 text-white rounded-lg text-sm font-semibold hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="download">download</span>
+                        Export Report
+                    </button>
+<button class="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#FDBB24] to-[#F5B41A] text-[#412D00] rounded-lg text-sm font-bold shadow-[0_8px_24px_-8px_rgba(245,180,26,0.5)] hover:scale-[1.02] transition-transform">
+<span class="material-symbols-outlined text-lg" data-icon="add">add</span>
+                        New Matchmaking Case
+                    </button>
+</div>
+</div>
+<!-- Bento Stats Grid -->
+<div class="grid grid-cols-4 gap-6 mb-8">
+<div class="col-span-1 p-6 bg-surface-container border border-outline-variant/10 rounded-2xl relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-[#F5B41A]"></div>
+<p class="text-[10px] uppercase tracking-widest font-bold text-[#A3A3A3] mb-4">Quarterly Success Rate</p>
+<div class="flex items-end justify-between">
+<h3 class="text-3xl font-black text-white">84.2%</h3>
+<span class="text-emerald-500 text-xs font-bold flex items-center bg-emerald-500/10 px-2 py-0.5 rounded-full">+4.1%</span>
+</div>
+<div class="mt-4 h-1 w-full bg-[#0E0E0E] rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-[#FDBB24] to-[#F5B41A]" style="width: 84%"></div>
+</div>
+</div>
+<div class="col-span-1 p-6 bg-surface-container border border-outline-variant/10 rounded-2xl">
+<p class="text-[10px] uppercase tracking-widest font-bold text-[#A3A3A3] mb-4">Total Revenue Generated</p>
+<div class="flex items-end justify-between">
+<h3 class="text-3xl font-black text-white">$2.48M</h3>
+<span class="text-emerald-500 text-xs font-bold flex items-center bg-emerald-500/10 px-2 py-0.5 rounded-full">+12%</span>
+</div>
+<p class="text-[10px] text-[#A3A3A3] mt-2 italic">Excludes pending commissions</p>
+</div>
+<div class="col-span-1 p-6 bg-surface-container border border-outline-variant/10 rounded-2xl">
+<p class="text-[10px] uppercase tracking-widest font-bold text-[#A3A3A3] mb-4">Cycles Completed</p>
+<div class="flex items-end justify-between">
+<h3 class="text-3xl font-black text-white">1,204</h3>
+<span class="material-symbols-outlined text-[#F5B41A]" data-icon="check_circle">check_circle</span>
+</div>
+<p class="text-[10px] text-[#A3A3A3] mt-2 italic">Current Fiscal Year</p>
+</div>
+<div class="col-span-1 p-6 bg-surface-container border border-outline-variant/10 rounded-2xl">
+<p class="text-[10px] uppercase tracking-widest font-bold text-[#A3A3A3] mb-4">Pending Settlements</p>
+<div class="flex items-end justify-between">
+<h3 class="text-3xl font-black text-white">42</h3>
+<span class="text-amber-500 text-xs font-bold flex items-center bg-amber-500/10 px-2 py-0.5 rounded-full">Action Req</span>
+</div>
+<p class="text-[10px] text-[#A3A3A3] mt-2 italic">Requiring Admin Approval</p>
+</div>
+</div>
+<!-- Main Data Table Container -->
+<div class="bg-surface border border-outline-variant/10 rounded-2xl overflow-hidden shadow-2xl">
+<div class="p-6 border-b border-outline-variant/10 flex justify-between items-center bg-surface-container-low">
+<div class="flex gap-4">
+<button class="px-4 py-1.5 bg-[#F5B41A]/10 text-[#F5B41A] text-[10px] font-bold uppercase tracking-widest rounded-full border border-[#F5B41A]/20">All Outcomes</button>
+<button class="px-4 py-1.5 text-[#A3A3A3] text-[10px] font-bold uppercase tracking-widest rounded-full hover:bg-surface-container-high transition-colors">Success Only</button>
+<button class="px-4 py-1.5 text-[#A3A3A3] text-[10px] font-bold uppercase tracking-widest rounded-full hover:bg-surface-container-high transition-colors">Audit Required</button>
+</div>
+<div class="flex items-center gap-2 text-[#A3A3A3] text-xs font-medium">
+<span class="material-symbols-outlined text-sm" data-icon="filter_list">filter_list</span>
+                        Sort by: Completion Date
+                    </div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low">
+<th class="px-6 py-4 text-[10px] font-bold text-[#A3A3A3] uppercase tracking-widest">Match ID</th>
+<th class="px-6 py-4 text-[10px] font-bold text-[#A3A3A3] uppercase tracking-widest">Couple Names</th>
+<th class="px-6 py-4 text-[10px] font-bold text-[#A3A3A3] uppercase tracking-widest">Matchmaker</th>
+<th class="px-6 py-4 text-[10px] font-bold text-[#A3A3A3] uppercase tracking-widest">Cycle Period</th>
+<th class="px-6 py-4 text-[10px] font-bold text-[#A3A3A3] uppercase tracking-widest">Outcome</th>
+<th class="px-6 py-4 text-[10px] font-bold text-[#A3A3A3] uppercase tracking-widest">Payment Status</th>
+<th class="px-6 py-4 text-[10px] font-bold text-[#A3A3A3] uppercase tracking-widest text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-6 py-5">
+<span class="text-xs font-mono font-bold text-[#F5B41A]">#KS-49201</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-white">Alexander V. &amp; Elena R.</span>
+<span class="text-[10px] text-[#A3A3A3]">Executive Elite Tier</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2">
+<img class="w-6 h-6 rounded-full" data-alt="portrait of a professional female matchmaker with glasses and a friendly smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChZX5EVaDgx5pd99UDUi3IumJqwRm4YFZAh_NeR3ygOVLRVDo0TL2nMpE2A9HlYh0DFtxm67h1fyDa4sx7HVdwfTEntVQseSgyGOOekaK3Ptl-L8sAgB70dWHU_BOR2fQTvRuyzsCTKHBfJ0ajCtnm0s5prSGSF-668o8hrl3ufIeYvnrRvhGHETtSp4mt8XQJF3EKgBoOA5dd4Ych7ZWGyLb0Cl3zkObx_gy5GBsJvxbh9Rhc1n4IchMRzv-3p_aIegPjzkn7NAs"/>
+<span class="text-xs font-medium text-[#E5E2E1]">Sarah Sterling</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="flex flex-col">
+<span class="text-xs text-[#E5E2E1]">Jan 12 — Oct 15, 2023</span>
+<span class="text-[10px] text-[#A3A3A3]">276 Days</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 uppercase tracking-tighter">
+<span class="material-symbols-outlined text-xs mr-1" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                                        Success
+                                    </span>
+</td>
+<td class="px-6 py-5">
+<span class="text-xs font-bold text-emerald-400">Paid</span>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="opacity-0 group-hover:opacity-100 transition-opacity text-[#A3A3A3] hover:text-white material-symbols-outlined" data-icon="more_vert">more_vert</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-6 py-5">
+<span class="text-xs font-mono font-bold text-[#F5B41A]">#KS-49185</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-white">Julian M. &amp; Sofia L.</span>
+<span class="text-[10px] text-[#A3A3A3]">Diamond Private Client</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2">
+<img class="w-6 h-6 rounded-full" data-alt="portrait of a male senior matchmaker in a grey suit looking professional" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiaRxKGECFp-JcCUIn3WLxz1pdGXWxFa8M-dEo5_swbhE0HaomvmkNbSz6d274PKgLUrcgc7i7c5KBSv-u5uxPFeX6hKPhw76dEBCRbylJABuWNYb7f1IU46X0VDexWpfVV6RbBEjvZQXaN82K4rxbSZILdbKvz4rAHe-_zZlW0jQiwRskVvcMNd1S1W8DmJSPRitVxvpcPfKa1UA2VhSqYNdLR1OrhAd1gJfR-6v69aHholh-d9sMEdK8i-OqgRljrlRbNUtmP-g"/>
+<span class="text-xs font-medium text-[#E5E2E1]">David Chen</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="flex flex-col">
+<span class="text-xs text-[#E5E2E1]">Feb 02 — Nov 01, 2023</span>
+<span class="text-[10px] text-[#A3A3A3]">272 Days</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 uppercase tracking-tighter">
+<span class="material-symbols-outlined text-xs mr-1" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                                        Success
+                                    </span>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<span class="text-xs font-bold text-amber-500">Pending</span>
+<button class="px-3 py-1 bg-[#F5B41A] text-[#412D00] text-[10px] font-bold rounded-lg shadow-lg hover:scale-105 active:scale-95 transition-all">Mark as Paid</button>
+</div>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="opacity-0 group-hover:opacity-100 transition-opacity text-[#A3A3A3] hover:text-white material-symbols-outlined" data-icon="more_vert">more_vert</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-6 py-5">
+<span class="text-xs font-mono font-bold text-[#F5B41A]">#KS-49177</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-white">Marcus T. &amp; Olivia G.</span>
+<span class="text-[10px] text-[#A3A3A3]">Founding Member</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2">
+<img class="w-6 h-6 rounded-full" data-alt="portrait of a professional female matchmaker with glasses and a friendly smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgenZR9TDqMTEW5Z24iQ2jRCD4YtMpaJCDmFpCaoMICD_ljpsn0l1bmtbD0JGDH5wPx-6t2H-lnKTk_2JHtTxmDZp7jpH2PPuBuUTIlbqrxaphGiPAtvkmIZU8sZbZ1I3pEWGvm721cLG04zqzbi71C_DqOjsqmEtcMrOKwA-hAm_vVS7P04OkKLmyZWQ6kHyL2_p4euFWlIBki9NtyZYSRcv8dEUeiH4tkfWOq4fw-Tm5GPaaiBICgMhPYhXzDoG7Q6FomNsrOqU"/>
+<span class="text-xs font-medium text-[#E5E2E1]">Sarah Sterling</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="flex flex-col">
+<span class="text-xs text-[#E5E2E1]">May 15 — Nov 05, 2023</span>
+<span class="text-[10px] text-[#A3A3A3]">174 Days</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold bg-[#353534] text-[#A3A3A3] border border-outline-variant/30 uppercase tracking-tighter">
+<span class="material-symbols-outlined text-xs mr-1" data-icon="block">block</span>
+                                        Closed
+                                    </span>
+</td>
+<td class="px-6 py-5">
+<span class="text-xs font-bold text-emerald-400">Paid</span>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="opacity-0 group-hover:opacity-100 transition-opacity text-[#A3A3A3] hover:text-white material-symbols-outlined" data-icon="more_vert">more_vert</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-6 py-5">
+<span class="text-xs font-mono font-bold text-[#F5B41A]">#KS-49162</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-white">Victor S. &amp; Diane K.</span>
+<span class="text-[10px] text-[#A3A3A3]">Legacy Elite</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2">
+<img class="w-6 h-6 rounded-full" data-alt="portrait of a middle-aged professional matchmaker in a creative office environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADw97J_AByAj-mGC_WygNMM7L1UnzAVvUmV9nkP-BPeGA6v6u-zCqG4e984qoPvkLUUA66S6TKc6P0Dt3mfgKbgQ27KsZdz3l2FTfAqlePbxzs_rcIV9Y00JRq6YW1eeZtpEJs8MC-bBYXcdNiM-3RS_wHlO2MJK88gX2ZiOkqGc6FqsmvJesT24ggFzLg6GV_jkfNnU52R7oZRWXz3qz3uqdBlTbBAtjGGceL1iYR-Y_kxBmAxAF6zpOGxxPtIpg5KEw-M8iSWig"/>
+<span class="text-xs font-medium text-[#E5E2E1]">Robert Lawson</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="flex flex-col">
+<span class="text-xs text-[#E5E2E1]">Aug 21 — Nov 10, 2023</span>
+<span class="text-[10px] text-[#A3A3A3]">81 Days</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 uppercase tracking-tighter">
+<span class="material-symbols-outlined text-xs mr-1" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                                        Success
+                                    </span>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<span class="text-xs font-bold text-amber-500">Pending</span>
+<button class="px-3 py-1 bg-[#F5B41A] text-[#412D00] text-[10px] font-bold rounded-lg shadow-lg hover:scale-105 active:scale-95 transition-all">Mark as Paid</button>
+</div>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="opacity-0 group-hover:opacity-100 transition-opacity text-[#A3A3A3] hover:text-white material-symbols-outlined" data-icon="more_vert">more_vert</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="p-6 border-t border-outline-variant/10 flex justify-between items-center bg-surface-container-low">
+<span class="text-xs text-[#A3A3A3]">Showing 1–10 of 1,204 results</span>
+<div class="flex gap-2">
+<button class="w-8 h-8 flex items-center justify-center rounded-lg border border-outline-variant/20 text-[#A3A3A3] hover:text-white transition-colors" disabled="">
+<span class="material-symbols-outlined text-lg" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg bg-[#F5B41A] text-[#412D00] text-xs font-bold">1</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg border border-outline-variant/20 text-[#A3A3A3] hover:text-white transition-colors text-xs font-bold">2</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg border border-outline-variant/20 text-[#A3A3A3] hover:text-white transition-colors text-xs font-bold">3</button>
+<span class="px-2 text-[#A3A3A3] flex items-center">...</span>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg border border-outline-variant/20 text-[#A3A3A3] hover:text-white transition-colors text-xs font-bold">120</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg border border-outline-variant/20 text-[#A3A3A3] hover:text-white transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom Information Panels -->
+<div class="grid grid-cols-2 gap-8 mt-8">
+<!-- Matchmaking Insights -->
+<div class="p-8 bg-[#201f1f] rounded-2xl border border-outline-variant/10 shadow-xl overflow-hidden relative">
+<div class="absolute -right-12 -top-12 w-48 h-48 bg-primary/5 rounded-full blur-3xl"></div>
+<h4 class="text-lg font-bold text-white mb-6">Financial Reconciliation Summary</h4>
+<div class="space-y-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-emerald-500" data-icon="account_balance_wallet">account_balance_wallet</span>
+</div>
+<span class="text-sm font-medium text-[#E5E2E1]">Total Billed</span>
+</div>
+<span class="text-lg font-bold text-white">$452,300.00</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-amber-500" data-icon="pending_actions">pending_actions</span>
+</div>
+<span class="text-sm font-medium text-[#E5E2E1]">Unsettled Match Fees</span>
+</div>
+<span class="text-lg font-bold text-white">$12,400.00</span>
+</div>
+<div class="pt-6 border-t border-outline-variant/10 flex items-center justify-between">
+<span class="text-sm font-bold uppercase tracking-widest text-[#A3A3A3]">Net Revenue After Commissions</span>
+<span class="text-2xl font-black text-[#F5B41A]">$398,150.00</span>
+</div>
+</div>
+</div>
+<!-- Recent System Logs -->
+<div class="p-8 bg-[#201f1f] rounded-2xl border border-outline-variant/10 shadow-xl">
+<div class="flex justify-between items-center mb-6">
+<h4 class="text-lg font-bold text-white">Recent Audit Activity</h4>
+<span class="text-[10px] font-bold text-[#A3A3A3] uppercase tracking-widest bg-surface-container-highest px-3 py-1 rounded-full">Real-time</span>
+</div>
+<div class="space-y-4">
+<div class="flex gap-4">
+<div class="w-1.5 h-1.5 mt-1.5 rounded-full bg-emerald-500"></div>
+<div class="flex-1">
+<p class="text-xs font-bold text-white leading-tight">Payment Verified for #KS-49110</p>
+<p class="text-[10px] text-[#A3A3A3] mt-1">Processed by System Automator • 4 mins ago</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-1.5 h-1.5 mt-1.5 rounded-full bg-amber-500"></div>
+<div class="flex-1">
+<p class="text-xs font-bold text-white leading-tight">New "Success" Outcome Declared</p>
+<p class="text-[10px] text-[#A3A3A3] mt-1">Matchmaker Sarah Sterling logged final cycle for #KS-49205 • 28 mins ago</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-1.5 h-1.5 mt-1.5 rounded-full bg-[#A3A3A3]"></div>
+<div class="flex-1">
+<p class="text-xs font-bold text-white leading-tight">Audit Report Generated: Q3 Financials</p>
+<p class="text-[10px] text-[#A3A3A3] mt-1">Super Admin requested full PDF export • 1 hour ago</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-1.5 h-1.5 mt-1.5 rounded-full bg-emerald-500"></div>
+<div class="flex-1">
+<p class="text-xs font-bold text-white leading-tight">Mark as Paid: #KS-49052</p>
+<p class="text-[10px] text-[#A3A3A3] mt-1">Manually authorized by Chief Auditor • 2 hours ago</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Contextual FAB for high-level actions (Only on appropriate screens) -->
+<button class="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-tr from-[#FDBB24] to-[#F5B41A] rounded-full shadow-[0_12px_40px_-12px_rgba(245,180,26,0.8)] flex items-center justify-center text-[#412D00] hover:scale-110 active:scale-95 transition-all z-[100]">
+<span class="material-symbols-outlined text-3xl font-bold" data-icon="auto_awesome">auto_awesome</span>
+</button>
+</body></html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-high": "#2a2a2a",
+            "on-secondary": "#2f3131",
+            "on-tertiary-fixed": "#001f2a",
+            "on-primary-container": "#664800",
+            "surface-container-lowest": "#0e0e0e",
+            "on-error-container": "#ffdad6",
+            "error": "#ffb4ab",
+            "surface-container-low": "#1c1b1b",
+            "outline-variant": "#504533",
+            "inverse-on-surface": "#313030",
+            "tertiary-fixed": "#bde9ff",
+            "secondary-container": "#484949",
+            "primary-container": "#f5b41a",
+            "on-secondary-fixed-variant": "#464747",
+            "surface-container": "#201f1f",
+            "secondary-fixed": "#e3e2e2",
+            "secondary": "#c7c6c6",
+            "secondary-fixed-dim": "#c7c6c6",
+            "on-surface-variant": "#d4c4ac",
+            "surface-tint": "#fdbb24",
+            "surface-container-highest": "#353534",
+            "surface": "#131313",
+            "on-tertiary-fixed-variant": "#004d64",
+            "on-secondary-container": "#b8b8b8",
+            "on-primary-fixed-variant": "#5d4200",
+            "surface-bright": "#3a3939",
+            "on-tertiary": "#003546",
+            "surface-variant": "#353534",
+            "on-secondary-fixed": "#1a1c1c",
+            "on-error": "#690005",
+            "tertiary-container": "#41cdff",
+            "surface-dim": "#131313",
+            "on-primary": "#412d00",
+            "tertiary": "#a9e3ff",
+            "background": "#131313",
+            "on-primary-fixed": "#271900",
+            "primary": "#ffd58a",
+            "outline": "#9d8f79",
+            "primary-fixed-dim": "#fdbb24",
+            "tertiary-fixed-dim": "#66d3ff",
+            "on-background": "#e5e2e1",
+            "error-container": "#93000a",
+            "on-surface": "#e5e2e1",
+            "inverse-surface": "#e5e2e1",
+            "on-tertiary-container": "#00546d",
+            "primary-fixed": "#ffdea6",
+            "inverse-primary": "#7c5800"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "fontFamily": {
+            "headline": ["Inter"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    body { font-family: 'Inter', sans-serif; }
+    .glass-panel {
+      background: rgba(53, 53, 52, 0.7);
+      backdrop-filter: blur(16px);
+    }
+    .metallic-shine {
+      background: linear-gradient(135deg, #fdbb24 0%, #f5b41a 100%);
+    }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0e0e0e; }
+    ::-webkit-scrollbar-thumb { background: #353534; border-radius: 10px; }
+  </style>
+</head>
+<body class="bg-[#0E0E0E] bg-surface-container-lowest text-on-surface flex min-h-screen">
+
+<main class="flex-1 flex flex-col min-h-screen">
+
+<div class="flex-1 p-8 overflow-y-auto max-w-7xl mx-auto w-full">
+<div class="mb-12 flex justify-between items-end">
+<div>
+<h1 class="text-3xl font-extrabold tracking-tight text-white mb-2">Match Pipeline History</h1>
+<p class="text-on-surface-variant max-w-lg">Tracking the journey of <span class="text-primary">Sarah Jenkins</span> and <span class="text-primary">David Miller</span>. Obsidian-tier matching status: <span class="text-[#F5B41A] font-semibold">High Compatibility</span>.</p>
+</div>
+<div class="flex gap-4">
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface px-6 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 border border-outline-variant/20">Export PDF</button>
+<button class="metallic-shine text-on-primary px-6 py-2.5 rounded-xl text-sm font-bold shadow-lg transition-transform hover:scale-[1.02]">Schedule Next Step</button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<div class="lg:col-span-8">
+<div class="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-4 before:bottom-0 before:w-px before:bg-gradient-to-b before:from-primary-container before:via-outline-variant/50 before:to-transparent">
+<div class="relative mb-12">
+<div class="absolute -left-10 top-2 w-4 h-4 rounded-full bg-primary-container ring-8 ring-primary-container/10"></div>
+<div class="glass-panel p-6 rounded-2xl border border-outline-variant/20 shadow-xl">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="label-sm text-on-surface-variant font-bold uppercase tracking-widest text-[0.6875rem]">Date 3 — Complete</span>
+<h3 class="text-xl font-bold text-white mt-1">Evening Gallery &amp; Dinner</h3>
+</div>
+<div class="bg-surface-container-high px-3 py-1 rounded-full text-xs text-primary-container font-semibold">Oct 24, 2023</div>
+</div>
+<div class="flex gap-8 mb-6">
+<div class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-lg" data-icon="location_on">location_on</span>
+                    The Obsidian Gallery, Chelsea
+                  </div>
+<div class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-lg" data-icon="restaurant">restaurant</span>
+                    L'Artisan Paris
+                  </div>
+</div>
+<p class="text-on-surface/80 text-sm leading-relaxed mb-6">
+                  Highly positive connection. Conversation flowed naturally regarding shared interests in contemporary art and international travel. Both parties expressed strong interest in a fourth meeting.
+                </p>
+<div class="grid grid-cols-3 gap-4 border-t border-outline-variant/10 pt-6">
+<div>
+<div class="text-[0.6rem] uppercase tracking-widest text-on-surface-variant mb-1">Energy Match</div>
+<div class="h-1.5 w-full bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[92%]"></div>
+</div>
+</div>
+<div>
+<div class="text-[0.6rem] uppercase tracking-widest text-on-surface-variant mb-1">Communication</div>
+<div class="h-1.5 w-full bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[88%]"></div>
+</div>
+</div>
+<div>
+<div class="text-[0.6rem] uppercase tracking-widest text-on-surface-variant mb-1">Outcome</div>
+<div class="text-xs font-bold text-primary">Progress to L4</div>
+</div>
+</div>
+</div>
+</div>
+<div class="relative mb-12 opacity-80">
+<div class="absolute -left-10 top-2 w-3 h-3 rounded-full bg-outline-variant ring-4 ring-outline-variant/10"></div>
+<div class="bg-surface-container p-6 rounded-2xl border border-outline-variant/10">
+<div class="flex justify-between items-start mb-3">
+<div>
+<span class="label-sm text-on-surface-variant font-bold uppercase tracking-widest text-[0.6875rem]">Date 2 — Complete</span>
+<h3 class="text-lg font-bold text-white mt-1">Riverside Walk &amp; Coffee</h3>
+</div>
+<div class="text-xs text-on-surface-variant">Oct 12, 2023</div>
+</div>
+<p class="text-on-surface/70 text-sm italic">"A comfortable afternoon session focusing on family values and professional ambitions."</p>
+</div>
+</div>
+<div class="relative opacity-60">
+<div class="absolute -left-10 top-2 w-3 h-3 rounded-full bg-outline-variant ring-4 ring-outline-variant/10"></div>
+<div class="bg-surface-container p-6 rounded-2xl border border-outline-variant/10">
+<div class="flex justify-between items-start mb-3">
+<div>
+<span class="label-sm text-on-surface-variant font-bold uppercase tracking-widest text-[0.6875rem]">Date 1 — Complete</span>
+<h3 class="text-lg font-bold text-white mt-1">Introduction &amp; Drinks</h3>
+</div>
+<div class="text-xs text-on-surface-variant">Sep 28, 2023</div>
+</div>
+<p class="text-on-surface/70 text-sm">Initial spark confirmed. Physical chemistry 8.5/10.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 space-y-8">
+<div class="bg-surface-container p-8 rounded-3xl border border-outline-variant/20 shadow-2xl">
+<h2 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" data-icon="auto_awesome">auto_awesome</span>
+              Schedule Next Step
+            </h2>
+<form class="space-y-6">
+<div class="space-y-2">
+<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant">Pipeline Stage</label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-xl px-4 py-3 text-on-surface appearance-none focus:ring-1 focus:ring-primary-container outline-none transition-all">
+<option>Date 4: Intimate Setting</option>
+<option>Date 5: Value Alignment</option>
+<option>Exclusive Transition</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant">Proposed Date</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-xl px-4 py-3 text-on-surface focus:ring-1 focus:ring-primary-container outline-none transition-all" type="date"/>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">calendar_today</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant">Venue / Location</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-xl px-4 py-3 text-on-surface focus:ring-1 focus:ring-primary-container outline-none transition-all" placeholder="Search Obsidian-approved venues..." type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">search</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant">Concierge Notes</label>
+<textarea class="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-xl px-4 py-3 text-on-surface focus:ring-1 focus:ring-primary-container outline-none transition-all resize-none" placeholder="Briefing for participants..." rows="4"></textarea>
+</div>
+<button class="w-full metallic-shine py-4 rounded-xl text-on-primary font-extrabold text-sm uppercase tracking-widest shadow-lg shadow-primary-container/10 transition-all hover:shadow-primary-container/20 active:scale-[0.98]" type="submit">
+                Confirm Scheduling
+              </button>
+</form>
+</div>
+<div class="bg-surface-container p-6 rounded-3xl border border-outline-variant/10">
+<h4 class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-4">Location Preview</h4>
+<div class="w-full aspect-video rounded-xl overflow-hidden border border-outline-variant/20 mb-4 bg-surface-container-lowest">
+<img alt="Map" class="w-full h-full object-cover grayscale opacity-60 contrast-125" data-alt="Stylized dark mode map interface of Manhattan with golden pin indicators and elegant minimalist typography" data-location="New York City" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCctlhejezVW4ZQUUoA0Xr46LZCcwF7TRZy2zS4DerFlcq2mQ5DQ_xJqS84EGR60CMhMb2SBtFiUzvQhCjd9nijf8YwGZlU23Nm75vwXOMS3qViQr0Cs0fMaX7DT7cHuJWkWAz4p2AZ4fVgmgTTsgEDpcQB_3L69KN8a-GdyhnwSL9s_5PekJDn_tFhb0inmKH8uGXtZvhoa3Fb0CIyR1CTg0KlJMnmeSdBRvE_0nKYAxumP_KLaJegEKtt6dnWd6UvDELMc8d9bKg"/>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container">near_me</span>
+</div>
+<div>
+<div class="text-sm font-bold text-white">Skyline Lounge</div>
+<div class="text-xs text-on-surface-variant">Private Terrace Access</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-white transition-colors">open_in_new</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-surface-container flex justify-around items-center py-3 z-[60] border-t border-outline-variant/10">
+<div class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px] font-bold uppercase">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-primary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">timeline</span>
+<span class="text-[10px] font-bold uppercase">Pipeline</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="text-[10px] font-bold uppercase">Schedule</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-bold uppercase">Account</span>
+</div>
+</nav>
+</body></html>

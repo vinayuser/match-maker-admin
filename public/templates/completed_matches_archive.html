@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kesher Portal | Completed Matches Archive</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0E0E0E;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(53, 53, 52, 0.7);
+            backdrop-filter: blur(16px);
+        }
+        .metallic-glow {
+            background: linear-gradient(135deg, #FDBB24 0%, #F5B41A 100%);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #131313;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #353534;
+            border-radius: 4px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary": "#2f3131",
+                        "on-tertiary-fixed": "#001f2a",
+                        "on-primary-container": "#664800",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-error-container": "#ffdad6",
+                        "error": "#ffb4ab",
+                        "surface-container-low": "#1c1b1b",
+                        "outline-variant": "#504533",
+                        "inverse-on-surface": "#313030",
+                        "tertiary-fixed": "#bde9ff",
+                        "secondary-container": "#484949",
+                        "primary-container": "#f5b41a",
+                        "on-secondary-fixed-variant": "#464747",
+                        "surface-container": "#201f1f",
+                        "secondary-fixed": "#e3e2e2",
+                        "secondary": "#c7c6c6",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "on-surface-variant": "#d4c4ac",
+                        "surface-tint": "#fdbb24",
+                        "surface-container-highest": "#353534",
+                        "surface": "#131313",
+                        "on-tertiary-fixed-variant": "#004d64",
+                        "on-secondary-container": "#b8b8b8",
+                        "on-primary-fixed-variant": "#5d4200",
+                        "surface-bright": "#3a3939",
+                        "on-tertiary": "#003546",
+                        "surface-variant": "#353534",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "on-error": "#690005",
+                        "tertiary-container": "#41cdff",
+                        "surface-dim": "#131313",
+                        "on-primary": "#412d00",
+                        "tertiary": "#a9e3ff",
+                        "background": "#131313",
+                        "on-primary-fixed": "#271900",
+                        "primary": "#ffd58a",
+                        "outline": "#9d8f79",
+                        "primary-fixed-dim": "#fdbb24",
+                        "tertiary-fixed-dim": "#66d3ff",
+                        "on-background": "#e5e2e1",
+                        "error-container": "#93000a",
+                        "on-surface": "#e5e2e1",
+                        "inverse-surface": "#e5e2e1",
+                        "on-tertiary-container": "#00546d",
+                        "primary-fixed": "#ffdea6",
+                        "inverse-primary": "#7c5800"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-[#0E0E0E] flex min-h-screen bg-surface-container-lowest text-on-surface">
+<!-- SideNavBar -->
+
+<div class="flex-1 flex flex-col">
+<!-- TopNavBar -->
+
+<!-- Main Content Area -->
+<main class="flex-1 p-8 overflow-y-auto">
+<!-- Header Section -->
+<div class="flex justify-between items-end mb-10">
+<div>
+<h1 class="text-display-md font-bold text-white tracking-tight leading-none">Match Archive</h1>
+<p class="mt-3 text-on-surface-variant max-w-lg">
+                        Comprehensive ledger of historical unions, closed files, and successful placements curated through the Obsidian methodology.
+                    </p>
+</div>
+<div class="flex gap-4">
+<button class="px-5 py-2.5 border border-outline/30 rounded-xl text-sm font-semibold hover:bg-surface-container transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="file_download">file_download</span>
+                        Export PDF
+                    </button>
+<button class="px-5 py-2.5 metallic-glow rounded-xl text-on-primary text-sm font-bold shadow-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="add">add</span>
+                        New Entry
+                    </button>
+</div>
+</div>
+<!-- Dashboard Stats Grid (Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+<div class="col-span-1 p-6 bg-surface-container rounded-xl border-l-2 border-primary-container">
+<p class="text-label-sm text-on-surface-variant uppercase tracking-widest font-bold">Total Matches</p>
+<p class="text-3xl font-black text-white mt-2">1,284</p>
+<div class="flex items-center mt-2 text-[10px] text-primary-container">
+<span class="material-symbols-outlined text-sm" data-icon="trending_up">trending_up</span>
+<span class="ml-1">+12% vs last quarter</span>
+</div>
+</div>
+<div class="col-span-1 p-6 bg-surface-container rounded-xl">
+<p class="text-label-sm text-on-surface-variant uppercase tracking-widest font-bold">Success Rate</p>
+<p class="text-3xl font-black text-white mt-2">78.4%</p>
+<div class="flex items-center mt-2 text-[10px] text-[#A3A3A3]">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span>
+<span class="ml-1">Verified Placement</span>
+</div>
+</div>
+<div class="col-span-1 p-6 bg-surface-container rounded-xl">
+<p class="text-label-sm text-on-surface-variant uppercase tracking-widest font-bold">Closed Files</p>
+<p class="text-3xl font-black text-white mt-2">342</p>
+<div class="flex items-center mt-2 text-[10px] text-error">
+<span class="material-symbols-outlined text-sm" data-icon="cancel">cancel</span>
+<span class="ml-1">Incompatibility noted</span>
+</div>
+</div>
+<div class="col-span-1 p-6 bg-surface-container rounded-xl">
+<p class="text-label-sm text-on-surface-variant uppercase tracking-widest font-bold">Outstanding</p>
+<p class="text-3xl font-black text-white mt-2">12</p>
+<div class="flex items-center mt-2 text-[10px] text-primary-container">
+<span class="material-symbols-outlined text-sm" data-icon="payments">payments</span>
+<span class="ml-1">Pending payments</span>
+</div>
+</div>
+</div>
+<!-- Table Section -->
+<div class="bg-surface rounded-2xl overflow-hidden border border-outline-variant/10 shadow-2xl">
+<div class="px-8 py-5 flex items-center justify-between bg-surface-container-low">
+<div class="flex items-center gap-6">
+<h2 class="text-headline-sm font-bold text-white">Archive Ledger</h2>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-primary-container/10 text-primary-container rounded-full text-[10px] font-bold tracking-widest uppercase">Success</span>
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface-variant rounded-full text-[10px] font-bold tracking-widest uppercase">Closed</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-xs text-on-surface-variant">Showing 1-10 of 1,284 entries</span>
+<div class="flex border border-outline-variant/30 rounded-lg overflow-hidden">
+<button class="px-3 py-1.5 hover:bg-surface-container transition-colors border-r border-outline-variant/30"><span class="material-symbols-outlined text-sm" data-icon="chevron_left">chevron_left</span></button>
+<button class="px-3 py-1.5 hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span></button>
+</div>
+</div>
+</div>
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low">
+<th class="px-8 py-4 text-label-sm font-bold uppercase tracking-widest text-[#A3A3A3]">Match ID</th>
+<th class="px-8 py-4 text-label-sm font-bold uppercase tracking-widest text-[#A3A3A3]">Couple Names</th>
+<th class="px-8 py-4 text-label-sm font-bold uppercase tracking-widest text-[#A3A3A3]">Matchmaker</th>
+<th class="px-8 py-4 text-label-sm font-bold uppercase tracking-widest text-[#A3A3A3]">Final Outcome</th>
+<th class="px-8 py-4 text-label-sm font-bold uppercase tracking-widest text-[#A3A3A3]">Payment Status</th>
+<th class="px-8 py-4 text-label-sm font-bold uppercase tracking-widest text-[#A3A3A3]">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container transition-colors group">
+<td class="px-8 py-5">
+<span class="font-mono text-xs text-primary-container font-bold">#KS-8892</span>
+</td>
+<td class="px-8 py-5">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-white">Sarah Jenkins &amp; David Chen</span>
+<span class="text-[10px] text-on-surface-variant mt-0.5">Matched June 12, 2023</span>
+</div>
+</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<img alt="Matchmaker Sarah" class="w-6 h-6 rounded-full" data-alt="Close-up profile of a woman with auburn hair in professional studio lighting, warm skin tones, sophisticated look" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCv6724gKuExgxLGHuJEfXwS9NerjJXqS1_0YJbip0p6txlGCz9QKzfIie9XNYOMn4cGF-R6yG4FVAcIiHszWjkUTi6Ss6fRYWcMhQhJUl8Hs_w2drMIOWTz6EY5QHREpUyfblSM_9hb1baPNl03ywUWtHZ4izdPrL5ZOSTHLuzhwU9vQRkjCArq6iCog-SZHkFFaUrrHCVxRZtmZitlXwxvTmiLBWgltuW6X0PZHamqwfUe3zhZcbdd0tPHqxb2L-hggmXhufXM58"/>
+<span class="text-sm text-on-surface">Elena Vance</span>
+</div>
+</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-2">
+<div class="w-1.5 h-1.5 rounded-full bg-primary-container"></div>
+<span class="text-sm font-semibold text-primary-container">Success</span>
+</div>
+</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-primary-container/10 text-primary-container text-[10px] font-black rounded-full uppercase">Paid</span>
+</td>
+<td class="px-8 py-5">
+<button class="p-2 text-on-surface-variant hover:text-white transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container transition-colors group">
+<td class="px-8 py-5">
+<span class="font-mono text-xs text-primary-container font-bold">#KS-9012</span>
+</td>
+<td class="px-8 py-5">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-white">Rachel Weiss &amp; Mark Thompson</span>
+<span class="text-[10px] text-on-surface-variant mt-0.5">Matched August 24, 2023</span>
+</div>
+</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<img alt="Matchmaker Julian" class="w-6 h-6 rounded-full" data-alt="Portrait of a young man with glasses and short beard, wearing a charcoal turtleneck, professional headshot style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_b_t8_89F83NrJUjZSyeQN-kKsD89VxbZQZKnBFyxhMqdFKAFPXilh2pmKHjNpjNp4dNnXs26r6zW4GsmjlOKd7xwSwOiaocvitePhdjRZNoihMAU2GvYj6vgS_MDwPJQjV_OSwARIeatdDxUcWwqAzhq_5T8OuVZEFR1NIQMaRc_0b7Y7hIwd5WWCUTjyeLUIJuSjrhwkIxUIzJ5wTGb4cLx7E0KyDHKZSzr9mYSF7-GnpdbMOyQqC4cyuAfjTz5yYD6s6J4LpA"/>
+<span class="text-sm text-on-surface">Julian Thorne</span>
+</div>
+</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-2">
+<div class="w-1.5 h-1.5 rounded-full bg-on-surface-variant/40"></div>
+<span class="text-sm font-semibold text-on-surface-variant">Closed</span>
+</div>
+</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-surface-container-highest text-[#A3A3A3] text-[10px] font-black rounded-full uppercase">Paid</span>
+</td>
+<td class="px-8 py-5">
+<button class="p-2 text-on-surface-variant hover:text-white transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container transition-colors group">
+<td class="px-8 py-5">
+<span class="font-mono text-xs text-primary-container font-bold">#KS-9104</span>
+</td>
+<td class="px-8 py-5">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-white">Amara Okafor &amp; Samuel Adeyemi</span>
+<span class="text-[10px] text-on-surface-variant mt-0.5">Matched October 05, 2023</span>
+</div>
+</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<img alt="Matchmaker Elena" class="w-6 h-6 rounded-full" data-alt="Professional woman with curly hair wearing a white blazer, minimalist grey background, bright high-end photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8lg6phoamSAI1TkYqqCAeR9uuwz6twJ8cTk6t_91RjgOz1_IWVpH_3sEaM8OL503G5LPdZbrsgUVbE4V_qro5V0zbKmA7DgN7NAQj3o__7lbApIWDc1TmZeGqCuF9yi_IjJLUFU6qXGLX0y91N8o8-tMh-viBuvD9X3B5kCab7BzFo-lB6Wqf--mMJCZGj2ugclip0cBpdoXJSZd26ba2P9cU2IKwlRKi9sj44s0uSiEvqOSsrzMnoz_KYrGPuB4-LlQ2rQx9krI"/>
+<span class="text-sm text-on-surface">Elena Vance</span>
+</div>
+</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-2">
+<div class="w-1.5 h-1.5 rounded-full bg-primary-container"></div>
+<span class="text-sm font-semibold text-primary-container">Success</span>
+</div>
+</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 border border-primary-container/30 text-primary-container text-[10px] font-black rounded-full uppercase">Pending</span>
+</td>
+<td class="px-8 py-5">
+<button class="p-2 text-on-surface-variant hover:text-white transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container transition-colors group">
+<td class="px-8 py-5">
+<span class="font-mono text-xs text-primary-container font-bold">#KS-9182</span>
+</td>
+<td class="px-8 py-5">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-white">Chloe Dubois &amp; Luc Girard</span>
+<span class="text-[10px] text-on-surface-variant mt-0.5">Matched November 14, 2023</span>
+</div>
+</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<img alt="Matchmaker Julian" class="w-6 h-6 rounded-full" data-alt="Professional male with kind features, office environment blurred in background, high contrast lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpu1sgDSHtwe_z7-og8WOjd_jqBAlwkuxSnp4A3DF7oGUlgX4sbPrsVEn6d-IAx5DNc26UVhOy2bvy9bofMKgKRLviQ8SWuG4zl6LaOgCxqy3qqpJc1iLkstGtBpsKZw2dlAZASEQlY7tz0FP9vGP0yl6Pi6Qe2LKKdLC6EmQkZwWN7q2E2otpNqqEDJih7FjXT9kCpF9knXmGujH1Sbl2hTtVeqDsl5H5fTMTHKMQVY1pSKlEYieTewko-XUGc5zkq4ZSXAM4-rQ"/>
+<span class="text-sm text-on-surface">Julian Thorne</span>
+</div>
+</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-2">
+<div class="w-1.5 h-1.5 rounded-full bg-primary-container"></div>
+<span class="text-sm font-semibold text-primary-container">Success</span>
+</div>
+</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-primary-container/10 text-primary-container text-[10px] font-black rounded-full uppercase">Paid</span>
+</td>
+<td class="px-8 py-5">
+<button class="p-2 text-on-surface-variant hover:text-white transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="px-8 py-6 bg-surface-container-low flex items-center justify-center">
+<button class="text-sm font-bold text-[#A3A3A3] hover:text-white transition-colors flex items-center gap-2">
+                        View Complete Archive
+                        <span class="material-symbols-outlined text-sm" data-icon="keyboard_double_arrow_down">keyboard_double_arrow_down</span>
+</button>
+</div>
+</div>
+<!-- Bottom Filter/Action Section (Asymmetric) -->
+<div class="mt-8 flex flex-col md:flex-row gap-6">
+<div class="flex-1 glass-panel p-6 rounded-2xl border border-outline-variant/10">
+<h3 class="text-white font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container" data-icon="filter_list">filter_list</span>
+                        Advanced Refinement
+                    </h3>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="space-y-1.5">
+<label class="text-[10px] font-bold uppercase tracking-tighter text-on-surface-variant">Date Range</label>
+<select class="w-full bg-surface-container-lowest border-none rounded-lg text-xs focus:ring-1 focus:ring-primary-container">
+<option>Last 12 Months</option>
+<option>2022 Archive</option>
+<option>All Time</option>
+</select>
+</div>
+<div class="space-y-1.5">
+<label class="text-[10px] font-bold uppercase tracking-tighter text-on-surface-variant">Success Tier</label>
+<select class="w-full bg-surface-container-lowest border-none rounded-lg text-xs focus:ring-1 focus:ring-primary-container">
+<option>All Outcomes</option>
+<option>Verified Success</option>
+<option>Administrative Closure</option>
+</select>
+</div>
+<div class="space-y-1.5">
+<label class="text-[10px] font-bold uppercase tracking-tighter text-on-surface-variant">Assigned To</label>
+<select class="w-full bg-surface-container-lowest border-none rounded-lg text-xs focus:ring-1 focus:ring-primary-container">
+<option>All Matchmakers</option>
+<option>Elena Vance</option>
+<option>Julian Thorne</option>
+</select>
+</div>
+<div class="flex items-end">
+<button class="w-full py-2 bg-surface-container-highest text-white text-xs font-bold rounded-lg hover:bg-surface-bright transition-colors">
+                                Apply Filter
+                            </button>
+</div>
+</div>
+</div>
+<div class="w-full md:w-80 bg-gradient-to-br from-primary-container/20 to-transparent p-6 rounded-2xl border border-primary-container/20">
+<h3 class="text-white font-bold mb-2">Audit Logs</h3>
+<p class="text-xs text-on-surface-variant mb-4 leading-relaxed">System-generated records for all compliance and match closure actions.</p>
+<button class="w-full py-3 border border-primary-container/50 text-primary-container text-xs font-bold rounded-xl hover:bg-primary-container/10 transition-colors uppercase tracking-widest">
+                        Download Manifest
+                    </button>
+</div>
+</div>
+</main>
+</div>
+</body></html>

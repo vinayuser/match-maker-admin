@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #0E0E0E; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(53, 53, 52, 0.7);
+            backdrop-filter: blur(16px);
+        }
+        .metallic-gold {
+            background: linear-gradient(135deg, #FDBB24 0%, #F5B41A 100%);
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #131313; }
+        ::-webkit-scrollbar-thumb { background: #353534; border-radius: 10px; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#5d4200",
+                        "on-surface-variant": "#d4c4ac",
+                        "tertiary-fixed-dim": "#66d3ff",
+                        "error-container": "#93000a",
+                        "on-secondary-container": "#b8b8b8",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "surface-tint": "#fdbb24",
+                        "background": "#131313",
+                        "on-primary-container": "#664800",
+                        "primary-container": "#f5b41a",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "outline-variant": "#504533",
+                        "tertiary": "#a9e3ff",
+                        "outline": "#9d8f79",
+                        "on-background": "#e5e2e1",
+                        "error": "#ffb4ab",
+                        "on-error": "#690005",
+                        "on-tertiary-container": "#00546d",
+                        "on-tertiary-fixed-variant": "#004d64",
+                        "primary-fixed": "#ffdea6",
+                        "surface-container-high": "#2a2a2a",
+                        "on-surface": "#e5e2e1",
+                        "on-secondary": "#2f3131",
+                        "inverse-on-surface": "#313030",
+                        "tertiary-fixed": "#bde9ff",
+                        "surface-dim": "#131313",
+                        "secondary-fixed": "#e3e2e2",
+                        "on-error-container": "#ffdad6",
+                        "surface": "#131313",
+                        "surface-container": "#201f1f",
+                        "primary": "#ffd58a",
+                        "secondary": "#c7c6c6",
+                        "surface-container-highest": "#353534",
+                        "primary-fixed-dim": "#fdbb24",
+                        "secondary-container": "#484949",
+                        "surface-container-lowest": "#0e0e0e",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-bright": "#3a3939",
+                        "surface-variant": "#353534",
+                        "on-primary": "#412d00",
+                        "on-secondary-fixed-variant": "#464747",
+                        "on-primary-fixed": "#271900",
+                        "surface-container-low": "#1c1b1b",
+                        "tertiary-container": "#41cdff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#0E0E0E] text-on-surface overflow-hidden">
+<!-- SideNavBar Shell -->
+
+<!-- TopNavBar Shell -->
+
+<!-- Main Canvas -->
+<main class="  p-8 min-h-screen">
+<div class="max-w-6xl mx-auto">
+<!-- Page Header -->
+<div class="flex justify-between items-end mb-8">
+<div>
+<h2 class="text-3xl font-bold text-white tracking-tight">Profile Approvals Queue</h2>
+<p class="text-on-surface-variant mt-1">Reviewing high-tier membership applications (7 pending)</p>
+</div>
+<div class="flex space-x-2">
+<span class="px-3 py-1 bg-surface-container-high rounded text-xs font-bold uppercase tracking-wider text-primary border border-primary/20">Pending: 07</span>
+<span class="px-3 py-1 bg-surface-container rounded text-xs font-bold uppercase tracking-wider text-[#A3A3A3]">Processed: 142</span>
+</div>
+</div>
+<!-- Approvals Queue List -->
+<div class="space-y-8">
+<!-- Large Approval Card 1 -->
+<div class="bg-surface-container rounded-xl overflow-hidden shadow-2xl transition-all hover:translate-y-[-2px]">
+<div class="flex flex-col lg:flex-row">
+<!-- Left Side: Main Photo -->
+<div class="lg:w-1/3 relative h-96 lg:h-auto overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="professional portrait of a young woman with dark hair and elegant attire in a sophisticated interior setting with soft warm light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZV9Pffy9jil0W8NeckikI7_JCTIqh2Lg5Xv0prkVEVrEia52AGwK3KmY1HmaMrUrFkvFfblA-Fz0WWpK5B5NH-eZgGPWbZg3GUtUaWwJ73JqHJGKZcGNh6UAlI3HAF9YABLrvLlOnF1EqKa82JfUkLLq5uOML145OZiJzGg2C6pb5tSAFh_pszVdsbnnX07L5Dfe9ZRyX5C0i7tQBYzdbJTKR_mMNi4J6UqL4MAnZjy-T7yNqPjjH_HMYchx5hJ2WZsHh7tkEZ9g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-6">
+<span class="text-primary font-bold text-xl">Sarah L.</span>
+<div class="flex items-center text-on-surface-variant text-xs mt-1">
+<span class="material-symbols-outlined text-xs mr-1" data-icon="schedule">schedule</span>
+                                    Submitted 2h ago
+                                </div>
+</div>
+</div>
+<!-- Right Side: Details -->
+<div class="lg:w-2/3 p-8 flex flex-col">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="text-2xl font-semibold text-white">Sarah Levington, 28</h3>
+<p class="text-on-surface-variant font-medium">Manhattan, New York</p>
+</div>
+<div class="px-4 py-1.5 bg-primary-container/10 border border-primary/30 rounded-full flex items-center">
+<span class="material-symbols-outlined text-primary text-sm mr-2" data-icon="workspace_premium" data-weight="fill">workspace_premium</span>
+<span class="text-primary font-bold text-xs uppercase tracking-widest">Modern Orthodox</span>
+</div>
+</div>
+<!-- Photo Verification -->
+<div class="mb-6">
+<h4 class="text-xs font-bold uppercase tracking-widest text-[#A3A3A3] mb-3">Verification Assets (4)</h4>
+<div class="grid grid-cols-4 gap-3">
+<div class="aspect-square rounded-lg overflow-hidden border border-outline-variant/20 group cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="candid close-up of a smiling young woman outdoors at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASlWTsDmgPz08lf32RRuagCHeKvkHxDGnRtlhuXI4Nk9kbJb3LQFYnYjC83LvDHLXkO6pxCTm8-15eNMcv8u53Xby5L-GPKef40J7JbLv2SqtOu084UOaaSZOBZAC5_reG33a7PWZWHNdybqx8jWXV9Z855rSkxuxIrh3weicAZg_Y62khkSz6CKs_G3792U2JdLGJYsC54CNNq8Nf5PufWDn7Z6egruDxyVKq3xlRoEhqKmg58utSsTNqK8EnbSioVYiOIta9UgI"/>
+</div>
+<div class="aspect-square rounded-lg overflow-hidden border border-outline-variant/20 group cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="medium shot of an elegant woman sitting in a library with soft evening light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7nehSlt0lyp5cfme9dO1kTlHcXh6U0AqHA4u0_m-jTLaLaBp_GiRa5CxcAAiKItciKgQJKMt0zarKt5QivgU9BaT2zyn8QVsUSovkdJUErB3xpe9Wtnw2A6EQf6X3QIBPrElaYdBg7D3D_P_ApKVeEGEG1xj1zU_HN8L_9Nd1CjyT66JIZC_9SY9umoGGCBFobj_-bzWbgo-DqIweEqdmsLBIVQ_Rih4Vum3HVDf5sP-XyPaNXD8fr7BfZb-jnwr9-euPDNmwzp0"/>
+</div>
+<div class="aspect-square rounded-lg overflow-hidden border border-outline-variant/20 group cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="close up face shot of a woman with natural makeup in bright daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4blcqmPAIZVSuEx3xs9ey5kK2kIlrlTWtBY8niJWyYdanNN3B_Ibf_SzbA5mKqAvnpzFy4wtR8aeXVk6365x65Yj1x8nleNu4C3yQ8t8eP0lNo-OZ7mM3Q9mwvKYpEUxDN8EfGUxFXe5oAums7YC6cYqt_xszb5f8oauko40HR4hwbixnhuYwqux5-cPoZK7XsCJJA7luqk5MJjO15H_SW5YSa6KZ4MRJ5LKSEYQV8OW_lgyPRaVhM-n4mLSvAQw4iGhSfbI35Ww"/>
+</div>
+<div class="aspect-square rounded-lg overflow-hidden bg-surface-container-high flex items-center justify-center border border-outline-variant/20 cursor-pointer">
+<span class="material-symbols-outlined text-on-surface-variant">add_circle</span>
+</div>
+</div>
+</div>
+<!-- Collapsible Summary -->
+<details class="group border-t border-[#504533]/20 pt-4 mb-8">
+<summary class="flex items-center justify-between cursor-pointer list-none text-sm font-semibold text-primary">
+<span>Profile Summary &amp; Intent</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-4 text-on-surface-variant text-sm leading-relaxed space-y-3">
+<p>"I'm looking for someone who values tradition but embraces a modern lifestyle. I work in Art Curation and love traveling to Europe during the summers. Family is everything to me."</p>
+<div class="grid grid-cols-2 gap-4 bg-surface-container-low p-4 rounded-lg">
+<div>
+<span class="block text-[10px] uppercase tracking-tighter text-[#A3A3A3]">Education</span>
+<span class="text-white">Masters in Fine Arts, NYU</span>
+</div>
+<div>
+<span class="block text-[10px] uppercase tracking-tighter text-[#A3A3A3]">Occupation</span>
+<span class="text-white">Senior Curator</span>
+</div>
+</div>
+</div>
+</details>
+<!-- Actions -->
+<div class="mt-auto flex items-center space-x-4 pt-4 border-t border-[#504533]/10">
+<button class="flex-1 metallic-gold text-on-primary py-3 rounded-lg font-bold text-sm hover:opacity-90 transition-all flex items-center justify-center">
+<span class="material-symbols-outlined mr-2" data-icon="check_circle">check_circle</span>
+                                    Approve Profile
+                                </button>
+<button class="px-6 py-3 border border-error/30 text-error rounded-lg font-bold text-sm hover:bg-error/5 transition-all flex items-center justify-center">
+<span class="material-symbols-outlined mr-2" data-icon="cancel">cancel</span>
+                                    Reject
+                                </button>
+<button class="px-6 py-3 border border-outline/30 text-on-surface-variant rounded-lg font-bold text-sm hover:bg-white/5 transition-all">
+                                    Request Changes
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Large Approval Card 2 -->
+<div class="bg-surface-container rounded-xl overflow-hidden shadow-2xl transition-all hover:translate-y-[-2px]">
+<div class="flex flex-col lg:flex-row">
+<!-- Left Side: Main Photo -->
+<div class="lg:w-1/3 relative h-96 lg:h-auto overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="waist-up portrait of a professional man in a tailored charcoal suit standing in a modern office with city views" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmcXM84Iu4onIsw4MLBi7siptU5hm9aGeP_GhFIelKHX-fGLEpuIBMC7iXVrxH-xkZjuwt48iPtqoVi66HcER-PRD0HVJZ-ue2y4h4PYjEapi3KdsYEDn9i723xbJaJsKFj7gd0D9sRzk3r0qN_QuGjGBP0NgHAMQ5jbSM688lG8YCgi1ytKwrrqkO5X5s4VEfj6h2dQxmrcrLi4IxlUZUOOUoadwCvOp9LPOiHsDZhsZg9Cy1n_MXgfYNP5LUCv4pDIZXOtKw84w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-6">
+<span class="text-primary font-bold text-xl">David K.</span>
+<div class="flex items-center text-on-surface-variant text-xs mt-1">
+<span class="material-symbols-outlined text-xs mr-1" data-icon="schedule">schedule</span>
+                                    Submitted 5h ago
+                                </div>
+</div>
+</div>
+<!-- Right Side: Details -->
+<div class="lg:w-2/3 p-8 flex flex-col">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="text-2xl font-semibold text-white">David Kaplan, 32</h3>
+<p class="text-on-surface-variant font-medium">Tel Aviv, Israel</p>
+</div>
+<div class="px-4 py-1.5 bg-primary-container/10 border border-primary/30 rounded-full flex items-center">
+<span class="material-symbols-outlined text-primary text-sm mr-2" data-icon="workspace_premium" data-weight="fill">workspace_premium</span>
+<span class="text-primary font-bold text-xs uppercase tracking-widest">Shomer Shabbat</span>
+</div>
+</div>
+<!-- Photo Verification -->
+<div class="mb-6">
+<h4 class="text-xs font-bold uppercase tracking-widest text-[#A3A3A3] mb-3">Verification Assets (3)</h4>
+<div class="grid grid-cols-4 gap-3">
+<div class="aspect-square rounded-lg overflow-hidden border border-outline-variant/20 group cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="candid profile photo of a man laughing during a formal dinner event" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDA0nOSiU88aHJePU4dD2trLlK3xm-3FRC0BY-xedwk6aLVD0Ic8rHYwXoSRPv63vDSVqaUop11eQphnDuDGlOwmErBfEKVMUIpRywYQdQUZI-bV880rZ0mYdSyhLlC3f2CzgtH3-ahKSelJFYCqKuF-zfuvoLOkBtMsNHIr2Tre18O9yYerG1r9AGgu42BZ5GGLEcKLpKRNqyugLV35AntK3D1nYTP8fKhI9C8NeQWVteY12mMzTXW0wcDWuPTSf729kG47Kkx0eU"/>
+</div>
+<div class="aspect-square rounded-lg overflow-hidden border border-outline-variant/20 group cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="man in business casual attire leaning against a brick wall with soft focus city background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV2oI01e3qrOM9n2eyeSb1fwvIGuJnJ0sXk0xsDL9wOcq2CLGIvTZ90h2mAL7y5cKwZXDR38ssW-H7XAjgk7zLHGqLprvMFSTfb3orheQYCrzw2-3WIpZ0ynjNXx8h86G4FFzhMit4_7XgxHZ5YTo344-tl6j0vd7B3TgSuc5SfcPk87llRlaWtQ8Yq7NbyHdb8kB7bhcQHfDALQhzAAvMoFEF6zIjifDZF3Phnx3AGKiaEvmC3AECO5SvPRqTfoQTXgltrg5UvZ8"/>
+</div>
+<div class="aspect-square rounded-lg overflow-hidden bg-surface-container-high flex items-center justify-center border border-outline-variant/20 cursor-pointer">
+<span class="material-symbols-outlined text-on-surface-variant">add_circle</span>
+</div>
+</div>
+</div>
+<!-- Collapsible Summary -->
+<details class="group border-t border-[#504533]/20 pt-4 mb-8">
+<summary class="flex items-center justify-between cursor-pointer list-none text-sm font-semibold text-primary">
+<span>Profile Summary &amp; Intent</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-4 text-on-surface-variant text-sm leading-relaxed space-y-3">
+<p>"Entrepreneur in the tech space. I balance my fast-paced career with dedicated learning and community involvement. Looking for a partner who is intellectually curious and shares my Zionist values."</p>
+<div class="grid grid-cols-2 gap-4 bg-surface-container-low p-4 rounded-lg">
+<div>
+<span class="block text-[10px] uppercase tracking-tighter text-[#A3A3A3]">Education</span>
+<span class="text-white">MBA, Stanford</span>
+</div>
+<div>
+<span class="block text-[10px] uppercase tracking-tighter text-[#A3A3A3]">Occupation</span>
+<span class="text-white">Venture Capitalist</span>
+</div>
+</div>
+</div>
+</details>
+<!-- Actions -->
+<div class="mt-auto flex items-center space-x-4 pt-4 border-t border-[#504533]/10">
+<button class="flex-1 metallic-gold text-on-primary py-3 rounded-lg font-bold text-sm hover:opacity-90 transition-all flex items-center justify-center">
+<span class="material-symbols-outlined mr-2" data-icon="check_circle">check_circle</span>
+                                    Approve Profile
+                                </button>
+<button class="px-6 py-3 border border-error/30 text-error rounded-lg font-bold text-sm hover:bg-error/5 transition-all flex items-center justify-center">
+<span class="material-symbols-outlined mr-2" data-icon="cancel">cancel</span>
+                                    Reject
+                                </button>
+<button class="px-6 py-3 border border-outline/30 text-on-surface-variant rounded-lg font-bold text-sm hover:bg-white/5 transition-all">
+                                    Request Changes
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination/Footer -->
+<div class="mt-12 flex justify-center pb-12">
+<div class="flex items-center space-x-1 bg-surface-container rounded-lg p-1">
+<button class="w-10 h-10 flex items-center justify-center text-on-surface-variant hover:text-white transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center bg-primary-container text-on-primary font-bold rounded">1</button>
+<button class="w-10 h-10 flex items-center justify-center text-on-surface-variant hover:text-white transition-colors">2</button>
+<button class="w-10 h-10 flex items-center justify-center text-on-surface-variant hover:text-white transition-colors">3</button>
+<button class="w-10 h-10 flex items-center justify-center text-on-surface-variant hover:text-white transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</body></html>

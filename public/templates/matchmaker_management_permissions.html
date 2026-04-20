@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary": "#2f3131",
+                        "on-tertiary-fixed": "#001f2a",
+                        "on-primary-container": "#664800",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-error-container": "#ffdad6",
+                        "error": "#ffb4ab",
+                        "surface-container-low": "#1c1b1b",
+                        "outline-variant": "#504533",
+                        "inverse-on-surface": "#313030",
+                        "tertiary-fixed": "#bde9ff",
+                        "secondary-container": "#484949",
+                        "primary-container": "#f5b41a",
+                        "on-secondary-fixed-variant": "#464747",
+                        "surface-container": "#201f1f",
+                        "secondary-fixed": "#e3e2e2",
+                        "secondary": "#c7c6c6",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "on-surface-variant": "#d4c4ac",
+                        "surface-tint": "#fdbb24",
+                        "surface-container-highest": "#353534",
+                        "surface": "#131313",
+                        "on-tertiary-fixed-variant": "#004d64",
+                        "on-secondary-container": "#b8b8b8",
+                        "on-primary-fixed-variant": "#5d4200",
+                        "surface-bright": "#3a3939",
+                        "on-tertiary": "#003546",
+                        "surface-variant": "#353534",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "on-error": "#690005",
+                        "tertiary-container": "#41cdff",
+                        "surface-dim": "#131313",
+                        "on-primary": "#412d00",
+                        "tertiary": "#a9e3ff",
+                        "background": "#131313",
+                        "on-primary-fixed": "#271900",
+                        "primary": "#ffd58a",
+                        "outline": "#9d8f79",
+                        "primary-fixed-dim": "#fdbb24",
+                        "tertiary-fixed-dim": "#66d3ff",
+                        "on-background": "#e5e2e1",
+                        "error-container": "#93000a",
+                        "on-surface": "#e5e2e1",
+                        "inverse-surface": "#e5e2e1",
+                        "on-tertiary-container": "#00546d",
+                        "primary-fixed": "#ffdea6",
+                        "inverse-primary": "#7c5800"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #131313; }
+        ::-webkit-scrollbar-thumb { background: #353534; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-[#0E0E0E] bg-surface-container-lowest text-on-surface font-body selection:bg-primary-container selection:text-on-primary">
+<div class="flex min-h-screen">
+<!-- SideNavBar Component -->
+
+<main class="flex-1 flex flex-col">
+<!-- TopNavBar Component -->
+
+<!-- Content Area -->
+<div class="p-10 max-w-6xl mx-auto w-full">
+<div class="flex items-end justify-between mb-12">
+<div>
+<h1 class="text-display-md font-extrabold text-white tracking-tight leading-none mb-2">Matchmaker Profile</h1>
+<p class="text-on-surface-variant text-body-md">Configure access and identity for premium onboarding.</p>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-2 border border-outline-variant/30 text-on-surface font-medium hover:bg-surface-container transition-all">Cancel</button>
+<button class="px-8 py-2 bg-gradient-to-br from-primary-fixed-dim to-primary-container text-on-primary font-bold shadow-lg shadow-primary-container/10">Save Record</button>
+</div>
+</div>
+<!-- Bento Layout for Form -->
+<div class="grid grid-cols-12 gap-6">
+<!-- Identity Section -->
+<div class="col-span-12 lg:col-span-8 bg-surface-container rounded-xl p-8 border-l-4 border-primary-container">
+<div class="flex items-center gap-2 mb-8">
+<span class="material-symbols-outlined text-primary-container">person_add</span>
+<h2 class="text-xl font-bold text-white">Basic Credentials</h2>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="col-span-2 md:col-span-1">
+<label class="block text-[0.6875rem] font-bold text-on-surface-variant uppercase tracking-widest mb-2">Full Legal Name</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant/20 rounded py-3 px-4 text-on-surface focus:border-primary-container transition-colors focus:ring-0" placeholder="e.g. Miriam Steinberg" type="text"/>
+</div>
+<div class="col-span-2 md:col-span-1">
+<label class="block text-[0.6875rem] font-bold text-on-surface-variant uppercase tracking-widest mb-2">Primary Email Address</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant/20 rounded py-3 px-4 text-on-surface focus:border-primary-container transition-colors focus:ring-0" placeholder="miriam@kesher-obsidian.com" type="email"/>
+</div>
+<div class="col-span-2 md:col-span-1">
+<label class="block text-[0.6875rem] font-bold text-on-surface-variant uppercase tracking-widest mb-2">Contact Phone</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant/20 rounded py-3 px-4 text-on-surface focus:border-primary-container transition-colors focus:ring-0" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+<div class="col-span-2 md:col-span-1">
+<label class="block text-[0.6875rem] font-bold text-on-surface-variant uppercase tracking-widest mb-2">Internal Title</label>
+<select class="w-full bg-surface-container-lowest border border-outline-variant/20 rounded py-3 px-4 text-on-surface focus:border-primary-container transition-colors focus:ring-0 appearance-none">
+<option>Senior Matchmaker</option>
+<option>Associate Lead</option>
+<option>Success Manager</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Profile Image Card -->
+<div class="col-span-12 lg:col-span-4 bg-surface-container rounded-xl p-8 flex flex-col items-center justify-center text-center">
+<div class="relative group">
+<div class="w-32 h-32 rounded-full border-2 border-dashed border-outline-variant flex items-center justify-center overflow-hidden mb-4 bg-surface-container-lowest">
+<span class="material-symbols-outlined text-4xl text-outline-variant group-hover:text-primary-container transition-colors">add_a_photo</span>
+</div>
+<div class="absolute inset-0 rounded-full bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity cursor-pointer">
+<span class="text-xs font-bold uppercase tracking-tighter">Upload Photo</span>
+</div>
+</div>
+<h3 class="text-white font-bold mb-1">Avatar Display</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Required for internal portal visibility and client correspondence.</p>
+</div>
+<!-- Permissions Checklist Section -->
+<div class="col-span-12 bg-surface-container rounded-xl p-8">
+<div class="flex items-center justify-between mb-8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<h2 class="text-xl font-bold text-white">Permissions Checklist</h2>
+</div>
+<span class="text-[0.6875rem] font-bold text-primary-container bg-primary-container/10 px-3 py-1 rounded-full uppercase tracking-widest">Administrative Rights</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+<!-- Permission Item -->
+<div class="flex items-start gap-4 p-5 bg-surface-container-low rounded-lg hover:bg-surface-container-high transition-colors group cursor-pointer border border-transparent hover:border-outline-variant/30">
+<div class="mt-1">
+<input class="w-5 h-5 rounded border-outline-variant/30 bg-surface-container-lowest text-primary-container focus:ring-0 focus:ring-offset-0" type="checkbox"/>
+</div>
+<div>
+<h4 class="text-sm font-bold text-white group-hover:text-primary-container transition-colors">View User Profiles</h4>
+<p class="text-xs text-on-surface-variant mt-1">Full read access to all candidate dossiers and historical data.</p>
+</div>
+</div>
+<!-- Permission Item -->
+<div class="flex items-start gap-4 p-5 bg-surface-container-low rounded-lg hover:bg-surface-container-high transition-colors group cursor-pointer border border-transparent hover:border-outline-variant/30">
+<div class="mt-1">
+<input checked="" class="w-5 h-5 rounded border-outline-variant/30 bg-surface-container-lowest text-primary-container focus:ring-0 focus:ring-offset-0" type="checkbox"/>
+</div>
+<div>
+<h4 class="text-sm font-bold text-white group-hover:text-primary-container transition-colors">Approve New Profiles</h4>
+<p class="text-xs text-on-surface-variant mt-1">Authority to validate and activate pending client registrations.</p>
+</div>
+</div>
+<!-- Permission Item -->
+<div class="flex items-start gap-4 p-5 bg-surface-container-low rounded-lg hover:bg-surface-container-high transition-colors group cursor-pointer border border-transparent hover:border-outline-variant/30">
+<div class="mt-1">
+<input class="w-5 h-5 rounded border-outline-variant/30 bg-surface-container-lowest text-primary-container focus:ring-0 focus:ring-offset-0" type="checkbox"/>
+</div>
+<div>
+<h4 class="text-sm font-bold text-white group-hover:text-primary-container transition-colors">Manage Team</h4>
+<p class="text-xs text-on-surface-variant mt-1">Invite new members and modify organizational roles.</p>
+</div>
+</div>
+<!-- Permission Item -->
+<div class="flex items-start gap-4 p-5 bg-surface-container-low rounded-lg hover:bg-surface-container-high transition-colors group cursor-pointer border border-transparent hover:border-outline-variant/30">
+<div class="mt-1">
+<input class="w-5 h-5 rounded border-outline-variant/30 bg-surface-container-lowest text-primary-container focus:ring-0 focus:ring-offset-0" type="checkbox"/>
+</div>
+<div>
+<h4 class="text-sm font-bold text-white group-hover:text-primary-container transition-colors">Financial Reporting</h4>
+<p class="text-xs text-on-surface-variant mt-1">Export transaction logs and view commission breakdowns.</p>
+</div>
+</div>
+<!-- Permission Item -->
+<div class="flex items-start gap-4 p-5 bg-surface-container-low rounded-lg hover:bg-surface-container-high transition-colors group cursor-pointer border border-transparent hover:border-outline-variant/30">
+<div class="mt-1">
+<input class="w-5 h-5 rounded border-outline-variant/30 bg-surface-container-lowest text-primary-container focus:ring-0 focus:ring-offset-0" type="checkbox"/>
+</div>
+<div>
+<h4 class="text-sm font-bold text-white group-hover:text-primary-container transition-colors">Match Finalization</h4>
+<p class="text-xs text-on-surface-variant mt-1">Confirm matches and move them to the Obsidian stage.</p>
+</div>
+</div>
+<!-- Permission Item -->
+<div class="flex items-start gap-4 p-5 bg-surface-container-low rounded-lg hover:bg-surface-container-high transition-colors group cursor-pointer border border-transparent hover:border-outline-variant/30">
+<div class="mt-1">
+<input class="w-5 h-5 rounded border-outline-variant/30 bg-surface-container-lowest text-primary-container focus:ring-0 focus:ring-offset-0" type="checkbox"/>
+</div>
+<div>
+<h4 class="text-sm font-bold text-white group-hover:text-primary-container transition-colors">Content Moderation</h4>
+<p class="text-xs text-on-surface-variant mt-1">Edit or remove sensitive profile content and imagery.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Meta Info Section -->
+<div class="col-span-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-surface-container-low rounded-xl p-6 flex items-center gap-4 border border-outline-variant/10">
+<div class="w-12 h-12 rounded-full bg-primary-container/10 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined">info</span>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface-variant uppercase tracking-widest">Last Modified</p>
+<p class="text-white font-medium">October 24, 2023 by Admin</p>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-6 flex items-center gap-4 border border-outline-variant/10">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined">security</span>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface-variant uppercase tracking-widest">Security Level</p>
+<p class="text-white font-medium">Tier 3 Obsidian Standard</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Floating Action Background Glows -->
+<div class="fixed top-[-10%] right-[-10%] w-[500px] h-[500px] bg-primary-container/5 blur-[120px] rounded-full pointer-events-none"></div>
+<div class="fixed bottom-[-10%] left-[20%] w-[400px] h-[400px] bg-primary-container/5 blur-[100px] rounded-full pointer-events-none"></div>
+</body></html>
