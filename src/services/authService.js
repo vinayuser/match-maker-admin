@@ -20,7 +20,9 @@ export const loginAdminAuth = async (payload) => {
           name: apiData.admin.name,
           role: apiData.admin.role,
           email: apiData.admin.email,
-          permissions: apiData.admin.permissions || []
+          permissions: apiData.admin.permissions || [],
+          roles: apiData.admin.roles || [],
+          isLocked: Boolean(apiData.admin.isLocked)
         }
       }
     }

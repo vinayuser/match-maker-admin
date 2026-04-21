@@ -46,11 +46,15 @@ export const DEFAULT_ADMIN_CREDENTIALS = {
 export const NAV_LINKS = [
   { label: "Dashboard", icon: "dashboard", to: ROUTES.dashboard },
   { label: "User Management", icon: "manage_accounts", to: ROUTES.userManagement },
-  { label: "Approval Queue", icon: "fact_check", to: ROUTES.profileApprovals }
+  { label: "Approval Queue", icon: "fact_check", to: ROUTES.profileApprovals },
+  { label: "Team Management", icon: "groups", to: ROUTES.matchmakerTeam },
+  { label: "Role Management", icon: "admin_panel_settings", to: ROUTES.matchmakerPermissions }
 ]
 
 export const NAV_ACTIVE_PATTERNS = {
   [ROUTES.dashboard]: [ROUTES.dashboard],
   [ROUTES.userManagement]: [ROUTES.userManagement],
-  [ROUTES.profileApprovals]: [ROUTES.profileApprovals]
+  [ROUTES.profileApprovals]: [ROUTES.profileApprovals],
+  [ROUTES.matchmakerTeam]: [ROUTES.matchmakerTeam],
+  [ROUTES.matchmakerPermissions]: [ROUTES.matchmakerPermissions]
 }
